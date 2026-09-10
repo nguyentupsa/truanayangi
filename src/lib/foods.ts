@@ -998,5 +998,37 @@ export const foods:Food[]=[
   "image": 134,
   "customId": "xoi-ghe",
   "quip": ""
+},
+{
+  "name": "Gà rán Jollibee",
+  "price": 50,
+  "sub": "Chickenjoy • Jollibee",
+  "image": 135,
+  "customId": "jollibee-chickenjoy",
+  "quip": ""
+},
+{
+  "name": "Mì Ý Jollibee",
+  "price": 50,
+  "sub": "Jolly Spaghetti • Jollibee",
+  "image": 136,
+  "customId": "jollibee-spaghetti",
+  "quip": ""
+},
+{
+  "name": "Burger gà Jollibee",
+  "price": 60,
+  "sub": "Chicken burger • Jollibee",
+  "image": 137,
+  "customId": "jollibee-chicken-burger",
+  "quip": ""
+},
+{
+  "name": "Cơm gà Jollibee",
+  "price": 60,
+  "sub": "Cơm + gà rán • Jollibee",
+  "image": 138,
+  "customId": "jollibee-chicken-rice",
+  "quip": ""
 }
 ].map(food=>({...food,rarity:priceRarity(food.price)}));
