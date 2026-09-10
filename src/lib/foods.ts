@@ -974,5 +974,29 @@ export const foods:Food[]=[
   "sub": "Thịt & rau • Việt Nam",
   "quip": "Miến này không phải miếng mồi deadline.",
   "image": 131
+},
+{
+  "name": "Bún nước tương lạc",
+  "price": 40,
+  "sub": "Chan tương lạc • Hà Nội",
+  "image": 132,
+  "customId": "bun-nuoc-tuong-lac",
+  "quip": ""
+},
+{
+  "name": "Bánh giò",
+  "price": 25,
+  "sub": "Nhân thịt mộc nhĩ • Hà Nội",
+  "image": 133,
+  "customId": "banh-gio",
+  "quip": ""
+},
+{
+  "name": "Xôi ghẹ",
+  "price": 60,
+  "sub": "Xôi kèm thịt ghẹ",
+  "image": 134,
+  "customId": "xoi-ghe",
+  "quip": ""
 }
 ].map(food=>({...food,rarity:priceRarity(food.price)}));

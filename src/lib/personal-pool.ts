@@ -26,7 +26,7 @@ export const excludedDishes = new Set<number>([
  // Bánh mì — không ai đặt cho bữa trưa văn phòng
  2, 34, 107, 124,
  // Ăn vặt / phần quá nhẹ / thiên về bữa sáng
- 27, 49, 73, 123,
+ 27, 49, 123,
  // Salad ăn kiêng
  51, 60, 61,
  // Mì lạnh / kén người ăn chung / mùi nặng
