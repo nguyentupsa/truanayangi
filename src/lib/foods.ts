@@ -1028,7 +1028,7 @@ export const foods:Food[]=[
   "price": 60,
   "sub": "Cơm + gà rán • Jollibee",
   "image": 138,
-  "customId": "jollibee-chicken-rice",
+  "img": "dishes/com-ga-jollibee.webp",
   "quip": ""
 }
 ].map(food=>({...food,rarity:priceRarity(food.price)}));
