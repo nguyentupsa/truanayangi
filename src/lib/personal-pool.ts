@@ -18,8 +18,28 @@ export function validateProfile(input: unknown): PoolProfile {
  if(new Set(custom.map(f=>f.id)).size!==custom.length || foods.length-p.disabled.length+custom.length<1) throw new Error('Keep at least one dish');
  return {disabled:p.disabled as number[],custom,revision:p.revision as number};
 }
+// Dishes kept out of the office lunch case. Add an `image` id to drop a dish,
+// remove one to bring it back. Custom dishes ("Món của tôi") are never filtered.
+export const excludedDishes = new Set<number>([
+ // Không ship được / cần bếp tại bàn
+ 14, 15, 18, 32, 44, 71, 101, 102, 105,
+ // Bánh mì — không ai đặt cho bữa trưa văn phòng
+ 2, 34, 107, 124,
+ // Ăn vặt / phần quá nhẹ / thiên về bữa sáng
+ 27, 49, 73, 123,
+ // Salad ăn kiêng
+ 51, 60, 61,
+ // Mì lạnh / kén người ăn chung / mùi nặng
+ 58, 96, 77, 83,
+ // Món Âu bày đĩa, nguội là mất ngon, hiếm khi đặt ship trưa
+ 53, 62, 63, 112, 114, 115, 116, 117, 118, 119,
+ // Trùng loại — giữ lại bản phổ biến hơn
+ 54, 55, 69, 70, 82, 110, 111,
+ // Vùng miền ít gặp ở HCM / cao tiền, ít đặt trưa
+ 19, 68, 81, 90, 103, 104, 106, 108,
+]);
 export function personalFoods(profile: PoolProfile): Food[] {
- return [...foods.filter(f=>!profile.disabled.includes(f.image)), ...profile.custom.map(f=>({...f,customId:f.id,image:-1,sub:'Món của tôi',quip:'',rarity:priceRarity(f.price)}))];
+ return [...foods.filter(f=>!excludedDishes.has(f.image)&&!profile.disabled.includes(f.image)), ...profile.custom.map(f=>({...f,customId:f.id,image:-1,sub:'Món của tôi',quip:'',rarity:priceRarity(f.price)}))];
 }
 export function personalSelector(population: Food[], target: number) {
  if(!population.length) return null;
