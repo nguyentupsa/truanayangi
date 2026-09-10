@@ -988,7 +988,7 @@ export const foods:Food[]=[
   "price": 25,
   "sub": "Nhân thịt mộc nhĩ • Hà Nội",
   "image": 133,
-  "customId": "banh-gio",
+  "img": "dishes/banh-gio.webp",
   "quip": ""
 },
 {
