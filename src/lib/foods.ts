@@ -996,7 +996,7 @@ export const foods:Food[]=[
   "price": 60,
   "sub": "Xôi kèm thịt ghẹ",
   "image": 134,
-  "customId": "xoi-ghe",
+  "img": "dishes/xoi-ghe.webp",
   "quip": ""
 },
 {
