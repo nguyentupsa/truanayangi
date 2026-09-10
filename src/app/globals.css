@@ -191,5 +191,6 @@ html{scrollbar-gutter:stable}.reel-window{overflow:clip}.reel-track{transform:tr
   .brand-logo { width: 40px; height: 40px; }
 }
 
-/* Real dish photos: opaque, cover-cropped, never blended like the sprite art. */
-.dish-photo{mix-blend-mode:normal!important;filter:none!important;background-color:#202126}
+/* Real dish photos: subject on near-black, blended into the card exactly like
+   the sprite atlas art. Feed images that are cut out and centered on #101012. */
+.dish-photo{mix-blend-mode:lighten!important;background-color:transparent!important}
