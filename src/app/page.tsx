@@ -20,6 +20,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const colors=['#4b69ff','#8847ff','#d32ce6','#eb4b4b','#e4ae39'];
 function FoodImage({food,language}:{food:Food;language:Language}){
+ if(food.img)return <div role="img" aria-label={foodName(food,language)} className="food-image dish-photo" style={{backgroundImage:`url(${basePath}/${food.img})`,backgroundSize:'cover',backgroundPosition:'center'}}/>;
  if(food.customId)return <div className="food-image custom-food-art" role="img" aria-label={food.name}><Utensils size={64}/></div>;
  const common=food.image>=120,lunch=food.image>=72&&!common,expanded=food.image>=36;
  const index=common?(food.image-120)%12:lunch?(food.image-72)%12:expanded?(food.image-36)%12:food.image%4;
