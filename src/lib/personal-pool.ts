@@ -43,6 +43,19 @@ export function personalFoods(profile: PoolProfile): Food[] {
 }
 export function personalSelector(population: Food[], target: number) {
  if(!population.length) return null;
- const feasible=Math.max(Math.min(...population.map(f=>f.price)),Math.min(target,Math.max(...population.map(f=>f.price))));
+ const prices=population.map(f=>f.price);
+ const min=Math.min(...prices),max=Math.max(...prices);
+ let feasible=Math.max(min,Math.min(target,max));
+ // createFoodSelector puts 100% of the probability on the priciest/cheapest
+ // dish when the target lands exactly on min or max (the only way to hit that
+ // exact average). A filtered pool (e.g. vegetarian-only) is often narrower
+ // than the chosen budget, which pins the target to max on every spin and
+ // makes the wheel deterministic. Nudge inward so every dish keeps a real
+ // chance, as long as there's more than one price point to spread across.
+ if(new Set(prices).size>2){
+  const margin=Math.min((max-min)*.3,(max-min)/2);
+  if(feasible>=max)feasible=max-margin;
+  if(feasible<=min)feasible=min+margin;
+ }
  return createFoodSelector(population,feasible);
 }
