@@ -978,9 +978,10 @@ export const foods:Food[]=[
 {
   "name": "Bún nước tương lạc",
   "price": 40,
-  "sub": "Chan tương lạc • Hà Nội",
+  "sub": "Đậu hũ chiên, giá, rau • Món chay",
   "image": 132,
-  "customId": "bun-nuoc-tuong-lac",
+  "veg": true,
+  "img": "dishes/bun-nuoc-tuong-lac.webp",
   "quip": ""
 },
 {
