@@ -1020,7 +1020,7 @@ export const foods:Food[]=[
   "price": 60,
   "sub": "Chicken burger • Jollibee",
   "image": 137,
-  "customId": "jollibee-chicken-burger",
+  "img": "dishes/burger-ga-jollibee.webp",
   "quip": ""
 },
 {
