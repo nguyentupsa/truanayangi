@@ -194,3 +194,11 @@ html{scrollbar-gutter:stable}.reel-window{overflow:clip}.reel-track{transform:tr
 /* Real dish photos: subject on near-black, blended into the card exactly like
    the sprite atlas art. Feed images that are cut out and centered on #101012. */
 .dish-photo{mix-blend-mode:lighten!important;background-color:transparent!important}
+
+/* Ăn chay / Ăn mặn / Tất cả: mutually exclusive quick filter, replaces the old veg-only switch. */
+.diet-filter{display:flex;gap:6px;padding-top:25px;flex-wrap:wrap}
+.diet-filter button{display:flex;align-items:center;gap:6px;min-height:36px;padding:0 13px;border:1px solid #36373d;border-radius:6px;background:#1c1d21;color:#c2c5bb;font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap}
+.diet-filter button:hover:not(:disabled){border-color:#4b4d54}
+.diet-filter button.selected{border-color:var(--primary);color:var(--primary);background:color-mix(in srgb,var(--primary),transparent 88%)}
+.diet-filter button:disabled{cursor:wait;opacity:.6}
+@media(max-width:640px){.diet-filter{padding-top:0}}
