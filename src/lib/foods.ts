@@ -1029,7 +1029,7 @@ export const foods:Food[]=[
   "sub": "Rau củ & nấm • Chay",
   "image": 139,
   "veg": true,
-  "customId": "pho-chay",
+  "img": "dishes/pho-chay.webp",
   "quip": ""
 },
 {
@@ -1038,7 +1038,7 @@ export const foods:Food[]=[
   "sub": "Rau củ & đậu hũ • Chay",
   "image": 140,
   "veg": true,
-  "customId": "hu-tieu-chay",
+  "img": "dishes/hu-tieu-chay.webp",
   "quip": ""
 },
 {
@@ -1047,7 +1047,7 @@ export const foods:Food[]=[
   "sub": "Nấm & gừng • Chay",
   "image": 141,
   "veg": true,
-  "customId": "chao-nam-chay",
+  "img": "dishes/chao-nam-chay.webp",
   "quip": ""
 },
 {
@@ -1056,7 +1056,7 @@ export const foods:Food[]=[
   "sub": "Đậu hũ sốt cà + cơm • Chay",
   "image": 142,
   "veg": true,
-  "customId": "dau-hu-sot-ca-chua",
+  "img": "dishes/dau-hu-sot-ca-chua.webp",
   "quip": ""
 },
 {
@@ -1065,7 +1065,7 @@ export const foods:Food[]=[
   "sub": "Canh chua rau củ + cơm • Chay",
   "image": 143,
   "veg": true,
-  "customId": "canh-chua-chay",
+  "img": "dishes/canh-chua-chay.webp",
   "quip": ""
 }
 ].map(food=>({...food,rarity:priceRarity(food.price)}));
