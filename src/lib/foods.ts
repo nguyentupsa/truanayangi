@@ -1000,19 +1000,11 @@ export const foods:Food[]=[
   "quip": ""
 },
 {
-  "name": "Gà rán Jollibee",
-  "price": 50,
-  "sub": "Chickenjoy • Jollibee",
-  "image": 135,
-  "customId": "jollibee-chickenjoy",
-  "quip": ""
-},
-{
   "name": "Mì Ý Jollibee",
   "price": 50,
   "sub": "Jolly Spaghetti • Jollibee",
   "image": 136,
-  "customId": "jollibee-spaghetti",
+  "img": "dishes/mi-y-jollibee.webp",
   "quip": ""
 },
 {
