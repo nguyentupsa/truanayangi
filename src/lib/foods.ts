@@ -1022,5 +1022,50 @@ export const foods:Food[]=[
   "image": 138,
   "img": "dishes/com-ga-jollibee.webp",
   "quip": ""
+},
+{
+  "name": "Phở chay",
+  "price": 45,
+  "sub": "Rau củ & nấm • Chay",
+  "image": 139,
+  "veg": true,
+  "customId": "pho-chay",
+  "quip": ""
+},
+{
+  "name": "Hủ tiếu chay",
+  "price": 40,
+  "sub": "Rau củ & đậu hũ • Chay",
+  "image": 140,
+  "veg": true,
+  "customId": "hu-tieu-chay",
+  "quip": ""
+},
+{
+  "name": "Cháo nấm chay",
+  "price": 30,
+  "sub": "Nấm & gừng • Chay",
+  "image": 141,
+  "veg": true,
+  "customId": "chao-nam-chay",
+  "quip": ""
+},
+{
+  "name": "Đậu hũ sốt cà chua",
+  "price": 35,
+  "sub": "Đậu hũ sốt cà + cơm • Chay",
+  "image": 142,
+  "veg": true,
+  "customId": "dau-hu-sot-ca-chua",
+  "quip": ""
+},
+{
+  "name": "Canh chua chay",
+  "price": 40,
+  "sub": "Canh chua rau củ + cơm • Chay",
+  "image": 143,
+  "veg": true,
+  "customId": "canh-chua-chay",
+  "quip": ""
 }
 ].map(food=>({...food,rarity:priceRarity(food.price)}));

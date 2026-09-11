@@ -40,6 +40,7 @@ const englishNames: Record<number, string> = {
   120:'Beef macaroni stir-fry',121:'Chicken congee',122:'Vietnamese beef stew & banh mi',123:'Savory sticky rice',124:'Vietnamese skillet banh mi',125:'Char siu rice',126:'Roast duck rice',127:'Char siu noodles',128:'Stir-fried udon',129:'Chicken burger & fries',130:'Tomato mascarpone pasta',131:'Stir-fried glass noodles',
   132:'Rice noodles in peanut-soy sauce',133:'Steamed rice dumpling',134:'Sticky rice with crab',
   136:'Jolly Spaghetti',137:'Jollibee chicken burger',138:'Jollibee chicken rice',
+  139:'Vegetarian pho',140:'Vegetarian hu tieu',141:'Mushroom congee',142:'Tofu in tomato sauce',143:'Vegetarian sour soup',
 };
 
 export function foodName(food: Food, language: Language) {
